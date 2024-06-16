@@ -6,7 +6,7 @@ import React from 'react'
 import { ThemeDropdown } from "./ThemeDropdown/ThemeDropdown";
 import { github } from "../utils/Icons";
 import SearchDialog from "./SearchDialog/SearchDialog";
-import { useGlobalContext } from "../context/GlobalContext";
+import { useGlobalContext } from "../context/globalContext";
 
 export default function Navbar() {
     const router = useRouter();
