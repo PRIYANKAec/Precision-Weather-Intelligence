@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useContext, createContext, useState, useEffect } from "react";
+import axios from 'axios';
 
 const GlobalContext = createContext();
 const GlobalContextUpdate = createContext();
@@ -11,7 +12,7 @@ export const GlobalContextProvider = ({ children }) => {
   const fetchForecast = async (lat, lon) => {
     try {
       const res = await axios.get(`api/weather?lat=${lat}&lon=${lon}`);
-
+            
       setForecast(res.data);
     } catch (error) {
       console.log("Error fetching forecast data: ", error.message);
@@ -19,7 +20,7 @@ export const GlobalContextProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    fetchForecast();
+    fetchForecast("11.504776","77.238396");
      }, []);
     
   return (

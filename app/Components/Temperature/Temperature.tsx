@@ -1,18 +1,19 @@
-"use client"
+"use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useGlobalContext } from "@/app/context/globalContext";
 import { kelvinToCelsius } from "@/app/utils/misc";
 import { clearSky, cloudy, drizzleIcon, navigation, rain, snow } from "@/app/utils/Icons";
+import moment from "moment";
 
 function Temperature() {
     const { forecast } = useGlobalContext();
 
     const { main, timezone, name, weather } = forecast;
 
-  if (!forecast || !weather) {
-    return <div>Loading...</div>;
-  }
+    if (!forecast || !weather) {
+        return <div>Loading...</div>;
+    }
 
   const temp = kelvinToCelsius(main?.temp);
   const minTemp = kelvinToCelsius(main?.temp_min);
@@ -39,6 +40,20 @@ function Temperature() {
         return clearSky;
     }
   };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const localMoment = moment().utcOffset(timezone / 60);
+      const formatedTime = localMoment.format("HH:mm:ss");
+      const day = localMoment.format("dddd");
+
+      setLocalTime(formatedTime);
+      setCurrentDay(day);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [timezone]);
+
   
     return (
     <div   className="pt-6 pb-5 px-4 border rounded-lg flex flex-col 
@@ -52,6 +67,17 @@ function Temperature() {
         <span>{navigation}</span>
       </p>
       <p className="py-10 text-9xl font-bold self-center">{temp}°</p>
+
+      <div>
+        <div>
+          <span>{getIcon()}</span>
+          <p className="pt-2 capitalize text-lg font-medium">{description}</p>
+        </div>
+        <p className="flex items-center gap-2">
+          <span>Low: {minTemp}°</span>
+          <span>High: {maxTemp}°</span>
+        </p>
+      </div>
     </div>
 
     )

@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function GET(req: NextRequest) {
   try {
     const apiKey = process.env.OPENWEATHERMAP_API_KEY;
-
+    
     const searchParams = req.nextUrl.searchParams;
 
     const lat = searchParams.get("lat");
