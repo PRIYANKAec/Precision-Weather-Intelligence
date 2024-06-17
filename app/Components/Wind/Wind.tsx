@@ -6,7 +6,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import Image from 'next/image';
 import React from 'react'
 
-const Wind = () => {
+function Wind() {
     const {forecast} = useGlobalContext();
 
     const windSpeed = forecast?.wind?.speed;
