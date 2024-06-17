@@ -6,8 +6,8 @@ import { unixToTime } from '@/app/utils/misc';
 import { Skeleton } from '@/components/ui/skeleton';
 import React from 'react'
 
-const Sunset = () => {
-     const {forecast} = useGlobalContext();
+function Sunset() {
+     const { forecast } = useGlobalContext();
 
      if(!forecast || !forecast?.sys || !forecast?.sys?.sunset) {
         return <Skeleton className="h-[12rem] w-full " />
