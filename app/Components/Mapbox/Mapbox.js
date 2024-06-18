@@ -54,7 +54,7 @@ function Mapbox() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
 
-        <FlyToActiveCity activeCityCoords={activeCityCords} />
+        <FlyToActiveCity activeCityCords={activeCityCords} />
       </MapContainer>
     </div>
   );
