@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Precision Weather Intelligence
 
-## Getting Started
+**Precision Weather Intelligence** is a weather forecasting application built with Next.js, Tailwind CSS, and Shadcn UI. It leverages the OpenWeatherMap API to provide users with detailed and up-to-date weather information, including temperature, air pollution, sunset times, and more. The application features a single-page UI designed to be visually appealing and highly functional.
 
-First, run the development server:
+## Features
+
+- **Current Weather Information:** Displays temperature, air pollution levels, wind speed, cloudiness, UV index, humidity, visibility, and pressure.
+- **Detailed Forecasting:** Shows previous weather forecasts, recent 5-day forecast, and "feels like" temperature.
+- **Geolocation:** Provides latitude and longitude of the selected city and displays it on a map.
+- **City Search:** Allows users to search and switch between different cities.
+- **Top Cities:** Displays information about the top largest cities.
+- **Responsive Design:** Fully responsive and designed using Tailwind CSS and Shadcn UI for a clean and modern look.
+
+## Tech Stack
+
+- **Next.js:** A React framework for building server-side rendered and statically generated web applications.
+- **Tailwind CSS:** A utility-first CSS framework for rapid UI development.
+- **Shadcn UI:** A component library based on Tailwind CSS for consistent and attractive design.
+- **OpenWeatherMap API:** Provides weather data including temperature, air pollution, and more.
+
+## Installation
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/your-username/precision-weather-intelligence.git
+   ```
+
+2. **Navigate to the Project Directory:**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   cd precision-weather-intelligence
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Install Dependencies:**
+   ### Create a `.env` File:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Add your OpenWeatherMap API key to `.env`:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+ ```bash
+   npm install
+   ```
+4. **Env Variable:**
+    ```bash
+   OPENWEATHERMAP_API_KEY=your_api_key_here
+   ```
+5. **Run the Development Server:**
+    ```bash
+    npm run dev
+   ```
+6. **Open Your Browser:**
+  - Go to [http://localhost:3000](http://localhost:3000) to view the application.
 
-## Learn More
+## Usage
+  - **Search for a City:** Enter the name of a city in the search bar to view its weather information.
+  - **View Current Weather:** See details such as temperature, humidity, and air pollution for the selected city.
+  - **Forecast Information:** Access current and 5-day weather forecasts.
+` - **Map Integration:** View the selected city on the integrated map.
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Feel free to contribute to this project by opening issues or submitting pull requests
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
