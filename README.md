@@ -18,6 +18,8 @@
 - **Shadcn UI:** A component library based on Tailwind CSS for consistent and attractive design.
 - **OpenWeatherMap API:** Provides weather data including temperature, air pollution, and more.
 
+![Screenshot from 2024-09-11 08-48-19](https://github.com/user-attachments/assets/787b2470-d940-4856-9bb1-9b18765f84f2)
+
 ## Installation
 
 1. **Clone the Repository:**
