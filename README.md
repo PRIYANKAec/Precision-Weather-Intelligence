@@ -4,7 +4,7 @@
 
 ## Features
 
-- **Current Weather Information:** Displays temperature, air pollution levels, wind speed, cloudiness, UV index, humidity, visibility, and pressure.
+- **Current Weather Information:**  Displays temperature, air pollution levels, wind speed, cloudiness, UV index, humidity, visibility, and pressure.
 - **Detailed Forecasting:** Shows previous weather forecasts, recent 5-day forecast, and "feels like" temperature.
 - **Geolocation:** Provides latitude and longitude of the selected city and displays it on a map.
 - **City Search:** Allows users to search and switch between different cities.
